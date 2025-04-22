@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.form-section {
+  flex: 1;
+}
+.card-preview {
+  flex: 1;
+  position: relative;
+}
+.card {
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.card-bank {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.card-number {
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+.card-holder {
+  font-size: 14px;
+}
+.card-expiry {
+  font-size: 14px;
+}
+.card-type {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+button {
+  padding: 12px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background: #45a049;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.logo {
+  height: 30px;
+  margin-bottom: 10px;
+}
+.card-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+}

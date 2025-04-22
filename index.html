@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Банковская карта</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Добавление банковской карты</h1>
+
+    <div class="container">
+      <div class="form-section">
+        <form id="cardForm">
+          <div>
+            <label for="bankName">Название банка:</label>
+            <input type="text" id="bankName" required />
+          </div>
+
+          <div>
+            <label for="cardType">Тип платежной системы:</label>
+            <select id="cardType" required>
+              <option value="">Выберите тип</option>
+              <option value="VISA">VISA</option>
+              <option value="MasterCard">MasterCard</option>
+              <option value="МИР">МИР</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="cardNumber">Номер карты (16 цифр):</label>
+            <input
+              type="text"
+              id="cardNumber"
+              pattern="[0-9]{16}"
+              maxlength="16"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="cardHolder">Имя держателя карты:</label>
+            <input type="text" id="cardHolder" required />
+          </div>
+
+          <div>
+            <label for="expiryMonth">Месяц/год окончания:</label>
+            <div style="display: flex; gap: 10px">
+              <select id="expiryMonth" required style="flex: 1">
+                <option value="">Месяц</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select id="expiryYear" required style="flex: 1">
+                <option value="">Год</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit">Добавить карту</button>
+        </form>
+      </div>
+
+      <div class="card-preview">
+        <div class="card">
+          <div class="card-bank" id="previewBank">Название банка</div>
+          <img
+            src=""
+            alt=""
+            class="card-logo"
+            id="previewBankLogo"
+            style="display: none"
+          />
+          <div class="card-number" id="previewNumber">0000 0000 0000 0000</div>
+          <div class="card-details">
+            <div class="card-holder" id="previewHolder">Имя держателя</div>
+            <div class="card-expiry" id="previewExpiry">ММ/ГГ</div>
+          </div>
+          <div class="card-type" id="previewType">VISA</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Список карт</h2>
+    <table id="cardsTable">
+      <thead>
+        <tr>
+          <th>Банк</th>
+          <th>Тип карты</th>
+          <th>Номер карты</th>
+          <th>Держатель</th>
+          <th>Действует до</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
